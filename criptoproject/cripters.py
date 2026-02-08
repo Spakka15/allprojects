@@ -1,10 +1,10 @@
 import random
 
-
-
 def criptalettere1(passw: str):
     numbers = []
     lenght = len(passw)
+
+    numbers.append("££%/$")
 
     for i in range(lenght):
 
@@ -147,6 +147,8 @@ def criptalettere2(passw: str):
     numbers = []
     lenght = len(passw)
 
+    numbers.append("&%11;")
+
     for i in range(lenght):
 
         if passw[i] == 'a':
@@ -287,6 +289,8 @@ def criptalettere2(passw: str):
 def criptalettere3(passw : str):
     numbers = []
     lenght = len(passw)
+
+    numbers.append("||0&_")
 
     for i in range(lenght):
 

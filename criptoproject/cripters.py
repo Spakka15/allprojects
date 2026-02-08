@@ -2,10 +2,6 @@ import random
 
 
 
-password = "abcdefg"
-
-CONST_PATH = "dates.dat"
-
 def criptalettere1(passw: str):
     numbers = []
     lenght = len(passw)
@@ -143,34 +139,9 @@ def criptalettere1(passw: str):
             else:               #a norvegese
                 numbers.append("å")
 
+    return
 
 
-    with open(CONST_PATH, "a") as f:
-
-        f.write("fff__!")
-
-        for i in range(2*lenght):
-
-            if i == ((2*lenght)/2):
-                choose = random.randint(0,1)
-
-                if choose == 0:
-                    f.write("?")
-                
-                else:
-                    f.write("@")
-
-            else:
-                if  isinstance(numbers[i], str):
-                    f.write(str(numbers[i]))
-                    if random.randint(0, 50) <= 25:
-                        f.write("&")
-                    else:
-                        f.write("/")
-                else:
-                    f.write(str(numbers[i]))
-            
-        f.write("\n")
-        f.close()
-        return
+def criptalettere2(passw: str):
+    pass
 

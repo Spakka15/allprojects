@@ -1,2 +1,2 @@
 # allprojects
-simple projects repository
+simple projects repository ciao

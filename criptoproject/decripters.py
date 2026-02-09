@@ -19,7 +19,6 @@ def deleteprefix(numbers:list):
 
     for i in range(5):
         numbers.pop(0)
-
     return
 
 

@@ -1,5 +1,7 @@
 from cripters import criptalettere1, criptalettere2, criptalettere3
 from decripters import decripter1, decripter2, decripter3, get_decr_indx, deleteprefix
+import sqlite3
+import time
 
 
 
@@ -20,5 +22,9 @@ def afetrlogin(user: str):
     4) Elimina credenziale d'accesso
     5) esci
     """)
+
+def cripta(string:str):
+    start= time.time()
+
 
 

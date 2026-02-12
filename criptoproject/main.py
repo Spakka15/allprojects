@@ -13,15 +13,43 @@ def creatutto():
 """)
     
 def afetrlogin(user: str):
-    print(f"""
-    Benvenuto {user}!
-    Scegli azione da effettuare:
-    1) Visuallizza credenzili accesso
-    2) Crea nuove credenziali d'accesso
-    3) Modifica credenziali d'accesso
-    4) Elimina credenziale d'accesso
-    5) esci
-    """)
+
+    while True:
+        print(f"""
+        Benvenuto {user}!
+        Scegli azione da effettuare:
+        1) Visuallizza credenzili accesso
+        2) Crea nuove credenziali d'accesso
+        3) Modifica credenziali d'accesso
+        4) Elimina credenziale d'accesso
+        5) esci
+        """)
+
+        scelta = int(input())
+
+        if scelta == 1:
+            visualizza()
+        elif scelta == 2:
+            crea()
+        elif scelta == 3:
+            modifica()
+        elif scelta == 4:
+            delete()
+        else:
+            print("Numero inserito non valido")
+
+def visualizza():
+    pass
+
+def crea():
+    pass
+
+def modifica():
+    pass
+
+def delete():
+    pass
+
 
 def cripta(string:str):
     start= time.time()

@@ -140,7 +140,7 @@ def criptalettere1(passw: str):
                 numbers.append("å")
         else:
             numbers.append(f"cc{passw[i]}")
-    return
+    return numbers
 
 
 def criptalettere2(passw: str):
@@ -283,7 +283,7 @@ def criptalettere2(passw: str):
                 numbers.append("å")
         else:
             numbers.append(f"cc{passw[i]}")
-    return
+    return numbers
 
 
 def criptalettere3(passw : str):
@@ -426,4 +426,4 @@ def criptalettere3(passw : str):
                 numbers.append("|")
         else:
             numbers.append(f"cc{passw[i]}")
-    return
+    return numbers

@@ -37,6 +37,35 @@ def main():
 def login():
     username = input("Inserisci Username per accesso: ")
     password = input("Inserisci Password per accesso: ")
+    listina = []
+    passwordine = []
+
+    try:
+        with open("settings.dat", "r+") as f:
+            while True:
+                lettura = f.readline()
+                listina.append(lettura)
+                if not lettura:
+                    break
+
+        
+        for i in range(len(listina)):
+            if listina[i] == "1" or listina[i] == "\n":
+                continue
+            else:
+                if i%2 == 0:
+                    passwordine.append(decripter1(listina[i]))
+                else:
+                    passwordine.append(decripter2(listina[i]))
+                
+
+        print(passwordine)
+                
+
+    except Exception as e:
+        print(f"Error verified {e}")
+
+
 
 def create_user():
 

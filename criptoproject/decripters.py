@@ -1,5 +1,5 @@
 
-ciao = ["a", "b", "c", "d", "e", "f", "g", "h"]
+
 
 
 def get_decr_indx(numbers:list):
@@ -18,12 +18,14 @@ def get_decr_indx(numbers:list):
 def deleteprefix(numbers:list):
 
     for i in range(5):
-        numbers.pop(0)
+        numbers[i].pop(0)
     return numbers
 
 
 def decripter1(numbers: list):
     finale = []
+
+
 
     for i in range(len(numbers)):
         if numbers[i] == "|" or numbers[i] == "!":
@@ -117,6 +119,7 @@ def decripter1(numbers: list):
 def decripter2(numbers: list):
 
     finale = []
+    
 
     for i in range(len(numbers)):
 

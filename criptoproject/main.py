@@ -35,6 +35,8 @@ def afetrlogin(user: str):
             modifica()
         elif scelta == 4:
             delete()
+        elif scelta == 5:
+            break
         else:
             print("Numero inserito non valido")
 
@@ -53,6 +55,5 @@ def delete():
 
 def cripta(string:str):
     start= time.time()
-
 
 

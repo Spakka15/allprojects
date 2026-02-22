@@ -1,10 +1,10 @@
 from cripters import criptalettere1, criptalettere2, criptalettere3
 from decripters import decripter1, decripter2, decripter3, get_decr_indx, deleteprefix
 from usefulfuncs import puliscilista
-import sqlite3
 import time
 
-
+global iter
+iter = 0
 
 def main():
 
@@ -30,7 +30,7 @@ def main():
             print("Indice inserito non valido")
 
     except Exception as e:
-        print(f"Si è verificato un errore: {e}")       
+        print(f"Error verified: {e}")       
 
 
 
@@ -45,12 +45,24 @@ def create_user():
 
     try: 
         with open("settings.dat", "a+") as f:
+
+            try:
+                iter = int(f.readline(1))
+            except:
+                iter = 0
+
+            iter +=1
+            f.write(f"{iter} \n")
+            
+
             userina = input("Inserisci username sicuro: ")
             for i in range(len(userina)):
                 letters.append(userina[i])
             inserire = criptalettere1(letters)
             for i in range(len(inserire)):
                 f.write(inserire[i])
+            
+            f.write("\n")
 
             
             puliscilista(letters)
@@ -67,16 +79,21 @@ def create_user():
                     for i in range(len(inserire)):
                         f.write(inserire[i])
                     
+                    f.write("\n")
+                    
                     puliscilista(letters)
                     puliscilista(inserire)
                     print("Credenziali salvate con successo")
+                    f.close()
                     break
 
                 else:
                     print("Le due password non corrispondono, reinseriscile!")
 
     except Exception as e:
-        print(f"Si è verificato un problema {e}")
+        print(f"Error verified: {e}")
+        main()
+        
 
     pass
     

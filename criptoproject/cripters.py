@@ -139,7 +139,10 @@ def criptalettere1(passw: str):
             else:               #a norvegese
                 numbers.append("å")
         else:
-            numbers.append(f"cc{passw[i]}")
+            if random.randint(1, 5) %2 ==0:
+                numbers.append(f"cc{passw[i]}")
+            else:
+                numbers.append(f"hh{passw[i]}")
     return numbers
 
 
@@ -282,7 +285,10 @@ def criptalettere2(passw: str):
             else:               #a norvegese
                 numbers.append("å")
         else:
-            numbers.append(f"cc{passw[i]}")
+            if random.randint(1, 5) %2 ==0:
+                numbers.append(f"cc{passw[i]}")
+            else:
+                numbers.append(f"hh{passw[i]}")
     return numbers
 
 
@@ -425,5 +431,8 @@ def criptalettere3(passw : str):
             else:               #bar vert e punto escl
                 numbers.append("|")
         else:
-            numbers.append(f"cc{passw[i]}")
+            if random.randint(1, 5) %2 ==0:
+                numbers.append(f"cc{passw[i]}")
+            else:
+                numbers.append(f"hh{passw[i]}")
     return numbers

@@ -1,7 +1,7 @@
 from cripters import criptalettere1, criptalettere2, criptalettere3
 from decripters import decripter1, decripter2, decripter3, get_decr_indx, deleteprefix
 from usefulfuncs import puliscilista
-import time
+
 
 global iter
 iter = 0
@@ -30,7 +30,7 @@ def main():
             print("Indice inserito non valido")
 
     except Exception as e:
-        print(f"Error verified: {e}")       
+        print(f"Error verified: {e}")
 
 
 
@@ -92,10 +92,8 @@ def create_user():
 
     except Exception as e:
         print(f"Error verified: {e}")
-        main()
-        
+        main() 
 
-    pass
     
 def afetrlogin(user: str):
 
@@ -137,9 +135,6 @@ def modifica():
 def delete():
     pass
 
-
-def cripta(string:str):
-    start= time.time()
 
 
 if __name__ == "__main__":

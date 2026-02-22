@@ -5,12 +5,39 @@ import time
 
 
 
-def creatutto():
+def main():
+
     print("""
     Benvenuto nel cripter fenomenale di Spakka_14!
-    Per iniziare inserisci le tue credenziali per accedere al database!
+    Premi 0 per inserire le tue credenziali per accedere al database!
+    Premi 1 per creare credenziali
+    Premi 2 per uscire
      
 """)
+    
+    try:
+
+        decision = int(input())
+
+        if decision == 0:
+            login()
+        elif decision == 1:
+            pass
+        elif decision == 2:
+            break
+        else:
+            print("Indice inserito non valido")
+
+    except Exception as e:
+        print(f"Si è verificato un errore: {e}")       
+
+
+
+def login():
+    username = input("Inserisci Username per accesso: ")
+    password = input("Inserisci Password per accesso: ")
+
+    
     
 def afetrlogin(user: str):
 
@@ -57,3 +84,5 @@ def cripta(string:str):
     start= time.time()
 
 
+if __name__ == "__main__":
+    main()
